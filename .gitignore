@@ -9,7 +9,7 @@ venv/
 env/
 ENV/
 .venv/
-
+venv312/
 # Archivos de entorno de Django
 db.sqlite3
 *.log
