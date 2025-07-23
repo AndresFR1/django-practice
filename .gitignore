@@ -1,0 +1,32 @@
+# .gitignore
+
+# Archivos de Python
+*.pyc
+__pycache__/
+
+# Archivos de entorno virtual
+venv/
+env/
+ENV/
+.venv/
+venv312/
+# Archivos de entorno de Django
+db.sqlite3
+*.log
+
+# Archivos de configuración/locales
+.env
+
+# Archivos generados por Django
+static/
+media/
+
+
+# Archivos de editores/IDE
+.vscode/
+.idea/
+*.swp
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
