@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+ </head>
+ <body>
+      <header class="header">
+         <h1>Home</h1>
+         <nav>
+            <ul style="style: none; list-style: none; display: flex; gap: 20px;">
+               <li><a href="">Inicio</a></li>
+               <li><a href="">Crear</a></li>
+               <li><a href="">Editar</a></li>
+               <li><a href="">Eliminar</a></li>
+            </ul>
+         </nav>
+      </header>
+
+      <div class="container-card">
+         {% for i in objecto %}
+            <div class="card">
+                 <img style="width: auto; height: auto; padding: 5px;" src="{% if i.imagen %}{{ i.imagen.url }}{% else %}{% static 'default.png' %}{% endif %}" class="card-img">
+                  <div class="card-body"> 
+                     <h3 class="card-title">
+                        {{ i.nombre }}
+                     </h3>
+                     <h2>
+                        Profesion: {{i.profesion}}
+                     </h2>
+                     <p>{{i.frase}}</p>
+                  </div>
+                  <div class="card-footer">
+                     Fecha de nacimiento: <p>{{i.fecha_nacimiento}}</p>
+                     Fecha de nacimiento: <p>{{i.fecha_fallecimiento}}</p>
+                     Nacionalidad: <p>{{i.nacionalidad}}</p>
+                  </div>
+            </div>
+         {% endfor %}
+      </div>
+
+    <script src="{% static 'scripts.js' %}"></script>
+ </body>
+ </html>
