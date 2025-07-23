@@ -1,7 +1,6 @@
 # django-practice
 
 Este es un proyecto de Django para la gestión de empleados.
-
 ## 📦 Requisitos
 
 - Python 3.10+ - Python 3.12 (recomendado)
